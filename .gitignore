@@ -1,2 +1,6 @@
+*.o
 *.pyc
-*.sqlite3
+*.pyo
+.DS\_Store
+*.sw?
+*.egg-info*
