@@ -1,35 +1,33 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 from setuptools import setup, find_packages
 
-try:
-    README = open('README.rst').read()
-except:
-    README = None
-
-try:
-    REQUIREMENTS = open('requirements.txt').lines()
-except:
-    REQUIREMENTS = None
 
 setup(
-    name='django-simplesite',
-    version='0.1',
-    description='A simple pseudo-static site app with menu, submenu and pages.',
-    long_description=README,
-    install_requires=REQUIREMENTS,
-    author='Mathijs de Bruin',
-    author_email='mathijs@mathijsfietst.nl',
-    url='http://github.com/dokterbob/django-simplesite',
-    packages = find_packages(),
-    classifiers=[
-        'Development Status :: 4 - Beta',
-        'Environment :: Web Environment',
-        'Framework :: Django',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: GNU Affero General Public License v3',
-        'Operating System :: OS Independent',
-        'Programming Language :: Python',
-    ],
+    name = "simplepages",
+    version = '0.54.0',
+    description = "A basic site structure and pages app",
+    keywords = "django, cms, pages, contentmanagement",
+    author = "Alex Kamedov",
+    author_email = "alex@kamedov.ru",
+    url = "git@3128.ru:repos/django-snippets.git",
+    license = "New BSD License",
+    platforms = ["any"],
+    classifiers = ["Development Status :: stable",
+                   "Environment :: Web Environment",
+                   "Framework :: Django",
+                   "Intended Audience :: Developers",
+                   "License :: OSI Approved :: BSD License",
+                   "Operating System :: OS Independent",
+                   "Programming Language :: Python",
+                   "Topic :: Utilities"],
+    packages=find_packages(),
+    include_package_data=True,
+    zip_safe=False,
+    package_data = {
+        'linker': [
+            'locale/*/LC_MESSAGES/*.*',
+            'templates/*',
+            'media/*',
+        ],
+    },
 )
+

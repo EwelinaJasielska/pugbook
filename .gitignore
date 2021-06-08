@@ -1,6 +1,3 @@
-*.o
 *.pyc
-*.pyo
-.DS\_Store
-*.sw?
-*.egg-info*
+.hg/*
+.tmp*
